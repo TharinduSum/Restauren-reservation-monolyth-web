@@ -15,4 +15,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 require __DIR__.'/customers.php';
+require __DIR__.'/tables.php';
 require __DIR__.'/settings.php';
+require __DIR__.'/reservations.php';
