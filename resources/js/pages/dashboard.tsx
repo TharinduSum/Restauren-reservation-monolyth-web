@@ -73,11 +73,7 @@ export default function Dashboard() {
     } = usePage<PageProps>().props;
 
     const weeklyChartData = {
-        labels: weekLabels.map((date) => {
-            const d = new Date(date);
-
-            return d.toLocaleDateString('en-US', { weekday: 'short' });
-        }),
+        labels: weekLabels,
         datasets: [
             {
                 label: 'Reservations',

@@ -131,6 +131,7 @@ export default function AsianFood() {
         date: '',
         time: '',
         guests: '2',
+        note: '',
     });
     const [submitted, setSubmitted] = useState(false);
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -165,6 +166,7 @@ export default function AsianFood() {
                     date: '',
                     time: '',
                     guests: '2',
+                    note: '',
                 });
                 setTimeout(() => setSubmitted(false), 5000);
             }
@@ -600,6 +602,23 @@ export default function AsianFood() {
                                                     </option>
                                                 ))}
                                             </select>
+                                        </div>
+                                        <div>
+                                            <label className="mb-2 block text-sm text-white/80">
+                                                Note (Optional)
+                                            </label>
+                                            <textarea
+                                                value={formData.note}
+                                                onChange={(e) =>
+                                                    setFormData({
+                                                        ...formData,
+                                                        note: e.target.value,
+                                                    })
+                                                }
+                                                className="w-full rounded-lg border border-white/20 bg-white/10 px-4 py-3 text-white placeholder:text-white/50"
+                                                placeholder="Any special requests or dietary requirements..."
+                                                rows={3}
+                                            />
                                         </div>
                                         <Button
                                             type="submit"
